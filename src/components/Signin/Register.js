@@ -2,27 +2,32 @@ import React from 'react';
 
 const Register = ({onEmailChange, onUsernameChange, onPasswordChange, onSubmitForm}) => {
 	return(
-	<div>
-
+	<div className="input-field-container">
 		<div className="field">
-		  <label className="label">Register</label>
-		  <div className="control">
+		  <label className="label">Create Account</label>
+		  <div className="control has-icons-left">
 		    <input 
 		    	className="input"
 		     	type="text" 
-		     	name="email"
-		     	placeholder="Email"
-		     	onChange={onEmailChange}/>
+		     	name="username"
+		     	placeholder="Username"
+		     	onChange={onUsernameChange}/>
+		    <span className="icon is-small is-left">
+		      <i className="fas fa-user"></i>
+		    </span>
 		  </div>
 		</div>
 		<div className="field">
-		  <div className="control">
+		  <div className="control has-icons-left">
 		    <input 
 		    	className="input" 
 		    	type="text" 
-		    	name="username"
-		    	placeholder="Username"
-		    	onChange={onUsernameChange}/>
+		    	name="email"
+		    	placeholder="Email"
+		    	onChange={onEmailChange}/>
+		    <span className="icon is-small is-left">
+		      <i className="fas fa-inbox"></i>
+		    </span>
 		  </div>
 		</div>
 
@@ -35,7 +40,7 @@ const Register = ({onEmailChange, onUsernameChange, onPasswordChange, onSubmitFo
 		    	placeholder="Password"
 		    	onChange={onPasswordChange}/>
 		    <span className="icon is-small is-left">
-		      <i className="fas fa-user"></i>
+		      <i className="fas fa-key"></i>
 		    </span>
 		    <span className="icon is-small is-right">
 		      <i className="fas fa-check"></i>
@@ -43,7 +48,7 @@ const Register = ({onEmailChange, onUsernameChange, onPasswordChange, onSubmitFo
 		  </div>
 		</div>
 
-		<div className="field is-grouped is-grouped-centered">
+		<div className="field is-grouped is-grouped-centered landing-page-button">
 		  <div className="control">
 		    <button 
 		    	className="button is-link" 
@@ -52,7 +57,6 @@ const Register = ({onEmailChange, onUsernameChange, onPasswordChange, onSubmitFo
 		    </button>
 		  </div>
 		</div>
-	
 	</div>
 	);
 }

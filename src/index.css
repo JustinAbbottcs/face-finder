@@ -29,14 +29,47 @@ code {
   */
 }
 
+.signin-container {
+  /*background-color: lightgrey;*/
+  height: 100vh;
+}
+
+.signin-container-2 {
+  /*background-color: lightgrey;*/
+  align-items: center;
+  height: 100%;
+}
+
 .button {
   cursor: pointer;
 }
 
 .box-signin {
-  width: 30%;
+  background-color: rgb(254, 253, 254);
+  box-shadow: 1px 4px 10px 1px rgba(0, 0, 255, .2);
+  width: 35%;
   padding: 40px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  min-width: 277px;
+}
+
+.input-field-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.sign-up-link {
+  margin-top: 25px;
+}
+
+.label {
+  padding-bottom: 10px;
+  font-size: 26px;
+  letter-spacing: .10em;
+}
+
+.landing-page-button {
+  padding-top: 10px;
 }
 
 /*.field-submit{

@@ -82,31 +82,34 @@ class Signin extends Component {
 		}
 	}
 
-
 	render() {
 		return(
-		<div className="columns">
-			<div className="column">
+		<div className="columns is-desktop is-vcentered  signin-container">
+			<div className="column is-desktop is-vcentered flex-direction-column signin-container-2">
 				<div className="box box-signin">
-					<nav className="breadcrumb is-centered" aria-label="breadcrumbs">
-					  <ul>
-					    <li onClick={() => this.setState({isUser: true})}><button className='breadcrumb'>Log In</button></li>
-					    <li onClick={() => this.setState({isUser: false})}><button className='breadcrumb'>Sign Up</button></li>
-					  </ul>
-					</nav>
-
-
 					{this.state.isUser ? 
-						<Login 
-							onSubmitForm={this.onSubmitForm}
-							onEmailChange={this.onEmailChange} 
-							onPasswordChange={this.onPasswordChange}/> 
+						<div>
+							<Login 
+								onSubmitForm={this.onSubmitForm}
+								onEmailChange={this.onEmailChange} 
+								onPasswordChange={this.onPasswordChange}/>
+							<div className="sign-up-link">
+								{"Don't have an account?"}
+								<a onClick={() => this.setState({isUser: false})}> {"Sign Up!"}</a>
+							</div>
+						</div>
 							: 
-						<Register 
-							onSubmitForm={this.onSubmitForm}
-							onUsernameChange={this.onUsernameChange}
-							onEmailChange={this.onEmailChange} 
-							onPasswordChange={this.onPasswordChange}/>}
+						<div>	
+							<Register 
+								onSubmitForm={this.onSubmitForm}
+								onUsernameChange={this.onUsernameChange}
+								onEmailChange={this.onEmailChange} 
+								onPasswordChange={this.onPasswordChange}/>
+							<div className="sign-up-link">
+								Already have an account?
+								<a onClick={() => this.setState({isUser: true})}> Log In!</a>
+							</div>
+						</div>}
 				</div>
 			</div>
 		</div>
