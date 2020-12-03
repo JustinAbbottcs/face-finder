@@ -176,11 +176,13 @@ class App extends Component {
             <FaceRecognition 
               url={this.state.url}
               box={this.state.box}/> 
-          </div>}
+          </div>
+        }
       </div>
     );
   }
 }
+
 
 export default App;
 

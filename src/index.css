@@ -29,6 +29,10 @@ code {
   */
 }
 
+h1 > span {
+  margin-left: 20px;
+}
+
 .signin-container {
   /*background-color: lightgrey;*/
   height: 100vh;
